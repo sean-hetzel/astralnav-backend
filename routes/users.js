@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const uuid = require('uuid');
-const users = require("../Users");
+const users = require("../data/Users");
 
 const idFilter = req => user => user.id === parseInt(req.params.id);
 
@@ -24,7 +24,7 @@ router.post("/", (req, res) => {
   const newUser = {
     ...req.body,
     id: uuid.v4(),
-    status: "active",
+    password: "tempPassword",
   };
 
   if (!newUser.name || !newUser.email) {

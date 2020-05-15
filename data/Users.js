@@ -3,19 +3,19 @@ const users = [
     id: 1,
     name: 'John Doe',
     email: 'john@gmail.com',
-    status: 'active'
+    password: 'gsd4651gsd145hj754'
   },
   {
     id: 2,
     name: 'Bob Williams',
     email: 'bob@gmail.com',
-    status: 'inactive'
+    password: 'fa456fasd5f456asf1'
   },
   {
     id: 3,
     name: 'Shannon Jackson',
     email: 'shannon@gmail.com',
-    status: 'active'
+    password: 'f4f56as4f56456sg'
   }
 ];
 
