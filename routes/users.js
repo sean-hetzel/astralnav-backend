@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const uuid = require('uuid');
-const users = require("../data/Users");
+const users = require("../models/User");
 
 const idFilter = req => user => user.id === parseInt(req.params.id);
 
