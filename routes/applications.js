@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Application = require("../models/Application");
 
-router.get("/applications", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const applications = await Application.find();
     res.json(applications);
@@ -11,7 +11,7 @@ router.get("/applications", async (req, res) => {
   }
 });
 
-router.get("/applications/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const application = await Application.findById(req.params.id);
     res.json(application);
@@ -20,7 +20,7 @@ router.get("/applications/:id", async (req, res) => {
   }
 });
 
-router.post("/applications", async (req, res) => {
+router.post("/", async (req, res) => {
   const application = new Application({
     user_id: req.body.user_id,
     company: req.body.company,
@@ -28,7 +28,7 @@ router.post("/applications", async (req, res) => {
     location: req.body.location,
     method: req.body.method,
     coverLetter: req.body.coverLetter,
-    date: req.body.coverLetter,
+    date: req.body.date,
     notes: req.body.notes,
     status: req.body.status,
   });
@@ -40,7 +40,7 @@ router.post("/applications", async (req, res) => {
   }
 });
 
-router.patch("/applications/:id", async (req, res) => {
+router.patch("/:id", async (req, res) => {
   try {
     const updatedApplication = await Application.findById(req.params.id);
     updatedApplication.updateOne({
@@ -50,7 +50,7 @@ router.patch("/applications/:id", async (req, res) => {
       location: req.body.location,
       method: req.body.method,
       coverLetter: req.body.coverLetter,
-      date: req.body.coverLetter,
+      date: req.body.date,
       notes: req.body.notes,
       status: req.body.status,
     });
@@ -60,7 +60,7 @@ router.patch("/applications/:id", async (req, res) => {
   }
 });
 
-router.delete("/applications/:id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
     const removedApplication = await Application.remove({ _id: req.params.id });
     res.json(removedApplication);

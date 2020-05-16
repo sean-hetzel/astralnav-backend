@@ -70,3 +70,17 @@
     email: 'shannon@gmail.com',
     password: 'f4f56as4f56456sg'
   }
+
+  {
+	"user_id": "5ebf83e7ec938444b8013cd7",
+    "company": "Tesla",
+    "position": "UI Developer",
+    "location": "Sparks NV",
+    "method": "Company Website",
+    "coverLetter": "cl",
+    "date": "5/14/2020",
+    "notes": "any notes",
+    "status": "Interviewing"
+  }
+
+  5ebf83e7ec938444b8013cd7

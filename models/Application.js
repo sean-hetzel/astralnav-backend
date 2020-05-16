@@ -7,7 +7,7 @@ const ApplicationSchema = mongoose.Schema({
   location: String,
   method: String,
   coverLetter: String,
-  date: Date,
+  date: { type: Date, default: Date.now },
   notes: String,
   status: String,
 });
